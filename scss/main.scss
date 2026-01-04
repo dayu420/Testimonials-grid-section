@@ -1,0 +1,29 @@
+@use "reset";
+@use "tokens";
+
+// Base
+
+html {
+    font-size: 100%;
+}
+
+
+body {
+    font-size: text(body, size);
+    line-height: text(body, line);
+    font-weight: text(body, weight);
+}
+
+
+
+
+// Layout
+
+
+
+
+
+// Components
+
+
+
