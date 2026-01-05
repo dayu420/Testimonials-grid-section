@@ -1,3 +1,5 @@
+@use "sass:map";
+
 /* =========================
    Font families
 ========================= */
@@ -41,7 +43,7 @@ $text: (
 
 // Returns typography token value from $text map
 @function text($role, $prop) {
-    @return map-get(map-get($text, $role), $prop);
+    @return map.get(map.get($text, $role), $prop);
 }
 
 /* =========================

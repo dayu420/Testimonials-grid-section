@@ -1,5 +1,5 @@
 @use "reset";
-@use "tokens";
+@use "tokens" as *;
 
 // Base
 
@@ -26,4 +26,29 @@ body {
 // Components
 
 
+.testimonial {
 
+    &__name {
+        font-size: text(identity, size);
+        line-height: text(identity, line);
+        font-weight: text(identity, weight);
+    }
+
+    &__status {
+        font-size: text(meta, size);
+        line-height: text(meta, line);
+        font-weight: text(meta, weight);
+    }
+    
+    &__subject {
+        font-size: text(subject, size);
+        line-height: text(subject, line);
+        font-weight: text(subject, weight);
+    }
+    
+    &__body {
+        font-size: text(body, size);
+        line-height: text(body, line);
+        font-weight: text(body, weight);
+    }
+}

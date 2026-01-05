@@ -1,0 +1,91 @@
+/* =========================
+   Font families
+========================= */
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+/* =========================
+   CSS Reset
+   ========================= */
+/* 1. Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margins */
+* {
+  margin: 0;
+}
+
+/* 3. Body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 4. Media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 5. Form elements inherit typography */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* =========================
+   Typography tokens (Testimonials Grid)
+========================= */
+/* =========================
+   Helper functions
+========================= */
+/* =========================
+   Primary colors
+========================= */
+/* =========================
+   Neutral colors
+========================= */
+/* =========================
+   Spacing scale
+========================= */
+html {
+  font-size: 100%;
+}
+
+body {
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.testimonial__name {
+  font-size: 0.8125rem;
+  line-height: 1.1;
+  font-weight: 500;
+}
+.testimonial__status {
+  font-size: 0.6875rem;
+  line-height: 1.1;
+  font-weight: 500;
+}
+.testimonial__subject {
+  font-size: 1.25rem;
+  line-height: 1.2;
+  font-weight: 600;
+}
+.testimonial__body {
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+/*# sourceMappingURL=main.css.map */
