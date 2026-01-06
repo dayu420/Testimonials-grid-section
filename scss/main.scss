@@ -1,5 +1,6 @@
 @use "reset";
 @use "tokens" as *;
+@use "sass:map";
 
 // Base
 
@@ -9,24 +10,98 @@ html {
 
 
 body {
+    font-family: "Barlow Semi Condensed", sans-serif;
     font-size: text(body, size);
     line-height: text(body, line);
     font-weight: text(body, weight);
+    background: linear-gradient(
+    to right,
+    white 0%,
+    white 5%,
+    lightgrey 15%,
+    lightgrey 100%
+);
 }
 
-
-
-
-// Layout
-
-
-
-
-
-// Components
-
+main {
+    display: flex;
+    flex-direction: column;
+    gap: spacing(400);
+    padding: spacing(400);
+}
 
 .testimonial {
+
+    display: flex;
+    flex-direction: column;
+    gap: spacing(200);
+    padding: spacing(400);
+    border-radius: spacing(100);
+    
+    &--purple {
+        background-color: map.get($colors-primary, purple-500);
+        color: map.get($colors-neutral, white);
+
+        .testimonial__status {
+            color: map.get($colors-primary, purple-50);
+        }
+        .testimonial__body {
+            color: map.get($colors-primary, purple-50);
+        }
+    }
+    
+    &--grey {
+        background-color: map.get($colors-neutral, grey-500);
+        color: map.get($colors-neutral, white);
+
+        .testimonial__status {
+            color: map.get($colors-neutral, grey-400);
+        }
+
+        .testimonial__body {
+            color: map.get($colors-neutral, grey-100);
+        }
+    }
+
+    &--white {
+        background-color: map.get($colors-neutral, white);
+        color: map.get($colors-neutral, grey-500);
+
+
+        
+        .testimonial__name {
+            color: map.get($colors-neutral, grey-500);
+        }
+
+        .testimonial__status {
+            color: map.get($colors-neutral, grey-400);
+        }
+
+        .testimonial__body {
+            color: map.get($colors-neutral, grey-400);
+        }
+    }
+
+    &--dark-blue {
+        background-color: map.get($colors-neutral, dark-blue);
+        color: map.get($colors-neutral, grey-200);
+
+        .testimonial__body {
+            color: map.get($colors-neutral, grey-100);
+        }
+    }
+    &__header {
+        display: flex;
+        align-items: center;
+        gap: spacing(100);
+    }
+    
+    &__avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
 
     &__name {
         font-size: text(identity, size);
