@@ -88,5 +88,18 @@ $spacing: (
   @return map.get($spacing, $size);
 }
 
+// Media queries for different breakpoints
+
+$breakpoints: (
+  tablet: 48rem,
+  desktop: 64rem,
+);
+
+
+@mixin mq($key) {
+  @media (min-width: map.get($breakpoints, $key)) {
+    @content;
+  }
+}
 
 
