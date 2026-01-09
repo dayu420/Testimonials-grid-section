@@ -69,11 +69,19 @@ body {
   background: linear-gradient(to right, white 0%, white 5%, lightgrey 15%, lightgrey 100%);
 }
 
-main {
+.testimonials-grid {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   padding: 2rem;
+}
+@media (min-width: 48rem) {
+  .testimonials-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "daniel daniel" "jonathan jeanette" "patrick patrick" "kira kira";
+  }
 }
 
 .testimonial {
@@ -122,6 +130,21 @@ main {
 }
 .testimonial--dark-blue .testimonial__body {
   color: hsl(214, 17%, 92%);
+}
+.testimonial--daniel {
+  grid-area: daniel;
+}
+.testimonial--jonathan {
+  grid-area: jonathan;
+}
+.testimonial--jeanette {
+  grid-area: jeanette;
+}
+.testimonial--patrick {
+  grid-area: patrick;
+}
+.testimonial--kira {
+  grid-area: kira;
 }
 .testimonial__header {
   display: flex;

@@ -23,11 +23,22 @@ body {
 );
 }
 
-main {
+.testimonials-grid {
     display: flex;
     flex-direction: column;
     gap: spacing(400);
     padding: spacing(400);
+
+    @include mq(tablet) {
+        display: grid;
+        gap: spacing(300);
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+        "daniel daniel"
+        "jonathan jeanette"
+        "patrick patrick"
+        "kira kira";
+    }
 }
 
 .testimonial {
@@ -37,7 +48,7 @@ main {
     gap: spacing(200);
     padding: spacing(400);
     border-radius: spacing(100);
-    
+
     &--purple {
         background-color: map.get($colors-primary, purple-500);
         color: map.get($colors-neutral, white);
@@ -49,47 +60,69 @@ main {
             color: map.get($colors-primary, purple-50);
         }
     }
+
     
     &--grey {
         background-color: map.get($colors-neutral, grey-500);
         color: map.get($colors-neutral, white);
-
+        
         .testimonial__status {
             color: map.get($colors-neutral, grey-400);
         }
-
+        
         .testimonial__body {
             color: map.get($colors-neutral, grey-100);
         }
     }
-
+    
     &--white {
         background-color: map.get($colors-neutral, white);
         color: map.get($colors-neutral, grey-500);
-
-
+        
+        
         
         .testimonial__name {
             color: map.get($colors-neutral, grey-500);
         }
-
+        
         .testimonial__status {
             color: map.get($colors-neutral, grey-200);
         }
-
+        
         .testimonial__body {
             color: map.get($colors-neutral, grey-400);
         }
     }
-
+    
     &--dark-blue {
         background-color: map.get($colors-neutral, dark-blue);
         color: map.get($colors-neutral, grey-200);
-
+        
         .testimonial__body {
             color: map.get($colors-neutral, grey-100);
         }
     }
+    
+    &--daniel {
+        grid-area: daniel;
+    }
+
+    &--jonathan {
+        grid-area: jonathan;
+    }
+
+    &--jeanette {
+        grid-area: jeanette;
+    }
+
+    &--patrick {
+        grid-area: patrick;
+    }
+
+    &--kira {
+        grid-area: kira;
+    }
+
     &__header {
         display: flex;
         align-items: center;
@@ -102,13 +135,13 @@ main {
         border-radius: 50%;
         object-fit: cover;
     }
-
+    
     &__name {
         font-size: text(identity, size);
         line-height: text(identity, line);
         font-weight: text(identity, weight);
     }
-
+    
     &__status {
         font-size: text(meta, size);
         line-height: text(meta, line);
