@@ -75,7 +75,7 @@ body {
     padding: spacing(400);
     border-radius: spacing(100);
 
-    @include mq(desktop) {    box-shadow: 15px 30px 35px 15px rgba(89, 89, 89, 0.3);};
+    // @include mq(desktop) {    box-shadow: 15px 30px 35px 15px rgba(89, 89, 89, 0.3);};
 
     &--purple {
         background-color: map.get($colors-primary, purple-500);
@@ -152,6 +152,14 @@ body {
 
     &--kira {
         grid-area: kira;
+    }
+
+    &--daniel, 
+    &--jonathan, 
+    &--jeanette,
+    &--patrick,
+    &--kira {
+        box-shadow: 10px 25px 20px 8px rgba(89, 89, 89, 0.3);
     }
 
     &__header {
